@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 @Component
 @Scope("prototype")
 public class Student {
-    @Value("99")
     private int rollno;
     private String name;
     private int marks;

@@ -19,7 +19,7 @@ public class SpringJdbcExApplication {
 
 		StudentService service = context.getBean(StudentService.class);
 		service.addStudent(s);
-		service.showStudents();
+
 
 	}
 
