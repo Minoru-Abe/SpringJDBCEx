@@ -1,6 +1,7 @@
 package com.telusko.SpringJDBCEx;
 
 import com.telusko.SpringJDBCEx.model.Student;
+import com.telusko.SpringJDBCEx.service.StudentService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -15,7 +16,11 @@ public class SpringJdbcExApplication {
 		s.setRollno(111);
 		s.setName("Minoru");
 		s.setMarks(200);
-		System.out.println(s.toString());
+
+		StudentService service = context.getBean(StudentService.class);
+		service.addStudent(s);
+		service.showStudents();
+
 	}
 
 }
